@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+  crossorigin="anonymous"></script>
+  
+<body>
+
+기존1
+
+<div id="app"></div>
+
+<script type="text/javascript">
+	
+$( document ).ready(function() {
+    console.log( "ready!" );
+    $('#app').html('hello world');
+    
+});
+	
+var viewModel = {};
+
+Object.defineProperty(viewModel,'str',{
+	get:function(){
+		console.log('접근');
+	},
+	set:function(newValue){
+		console.log('할당',newValue);
+		$('#app').html(newValue);
+	}
+})	
+</script>
+</body>
+</html>
