@@ -6,3 +6,10 @@ Ex05 props --> 상위컴포넌트에서 하위컴포넌트로 데이터 전달
 Ex06 event emit
 Ex07 같은 컴포넌트간 데이터 이동
 Ex08 router
+Ex09 Axios
+Ex10 computed
+Ex11 v-bind:id
+Ex12 v-if, v-else, v-show
+Ex13 v-model, vuejs.org
+Ex14 watch 
+Ex15 v-bind:class

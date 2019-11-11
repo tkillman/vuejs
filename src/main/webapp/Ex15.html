@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<style>
+.warning{
+	color: red
+}
+</style>
+
+<div id="app">
+<div v-bind:class="{warning:isError}">경고메세지</div>
+<div v-bind:class="errorText">경고메세지22</div>
+</div>
+
+<script>
+new Vue({
+	el: '#app'
+	,data:{
+		isError:false
+	}
+	,computed:{
+		errorText: function(){
+			return this.isError ? 'warning':null
+		}
+	}
+})
+</script>
+</body>
+</html>

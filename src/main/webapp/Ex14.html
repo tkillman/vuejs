@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+computed : 가벼운 로직 <br/>
+watch : 무거운 로직 
+<div id="app">
+<button v-on:click="addNum">숫자증가</button>
+</div>
+
+<script>
+new Vue({
+	el: '#app'
+	,data: {
+		num: 10
+	}
+	,methods: {
+		addNum: function(){
+			this.num = this.num + 1;
+		}
+		,logtext: function(){
+			console.log('changed')
+		}
+	}
+	,watch: {
+		num: function(newValue, oldValue){
+			this.logtext();
+		}
+	}
+})
+</script>
+
+</body>
+</html>
