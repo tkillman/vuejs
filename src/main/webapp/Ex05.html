@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/vue.js"></script>
+</head>
+<body>
+v-bind:프롭스 속성이름="상위 컴포넌트 데이터 이름"
+
+<div id="app">
+<app-middle v-bind:propsdata="message"></app-middle>
+</div>
+
+<script>
+new Vue({
+	el: '#app'
+	,components:{
+		'app-middle': {
+			template:'<div>{{propsdata}}</div>'
+			, props: ['propsdata']
+		}
+	}
+	,data:{
+		message:'hi'
+	}
+})
+</script>
+
+</body>
+</html>

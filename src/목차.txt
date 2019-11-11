@@ -1,2 +1,8 @@
 Ex01 기존
 Ex02 hello vuejs
+Ex03 전역컴포넌트 등록
+Ex04 지역컴포넌트 등록
+Ex05 props --> 상위컴포넌트에서 하위컴포넌트로 데이터 전달
+Ex06 event emit
+Ex07 같은 컴포넌트간 데이터 이동
+Ex08 router

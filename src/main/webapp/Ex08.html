@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+<body>
+<div id="app">
+<router-link to="/login">login button</router-link>
+<router-link to="/main">main button</router-link>
+<router-view></router-view>
+</div>
+
+<script>
+
+var LoginComponent = {
+	template: '<div>login</div>'
+}
+
+var MainComponent = {
+	template: '<div>main</div>'	
+}
+var router = new VueRouter({
+	routes:[
+		{   //페이지의 url
+			path: '/login'
+			//해당 url에 표현될 component
+			,component: LoginComponent
+		}
+		,{
+			path: '/main'
+			,component: MainComponent
+		}
+	]
+});
+
+new Vue({
+	el:'#app'
+	,router: router
+});
+</script>
+</body>
+</html>
